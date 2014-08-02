@@ -4,7 +4,7 @@ var concat = require('concat-stream');
 var voicebox = require('voicebox-karaoke');
 var ecstatic = require('ecstatic')({ root: __dirname + '/public' });
 
-http.createServer(function (req, res) {
+var server = http.createServer(function (req, res) {
   console.log('%s', req.url);
 
   if (req.url === '/bump') {
@@ -33,4 +33,8 @@ http.createServer(function (req, res) {
   ecstatic(req, res);
 
 
-}).listen(3000);
+});
+
+setTimeout(function () {
+  server.listen(3000);
+}, 2000)
