@@ -1,0 +1,12 @@
+#!/usr/bin/env node
+
+var voicebox = require('voicebox-karaoke'),
+    room = process.argv[2],
+    song = process.argv[3]
+
+console.log('%s @ %s| Bump', song, room);
+var client = voicebox(room);
+
+client.bump(song, function (err, res) {
+  console.dir(arguments);
+});
