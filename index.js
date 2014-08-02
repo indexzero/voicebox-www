@@ -2,14 +2,9 @@ var http = require('http');
 var fs = require('fs');
 var concat = require('concat-stream');
 var voicebox = require('voicebox-karaoke');
+var ecstatic = require('ecstatic')({ root: __dirname + '/public' });
 
 http.createServer(function (req, res) {
-
-  if (req.url === '/') {
-    return fs.createReadStream(__dirname + '/public/index.html')
-      .pipe(res);
-  }
-
   console.log('%s', req.url);
 
   if (req.url === '/bump') {
@@ -28,5 +23,9 @@ http.createServer(function (req, res) {
     }));
     return;
   }
+
+  ecstatic(req, res);
+
+
 }).listen(3000);
 
