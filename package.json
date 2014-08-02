@@ -1,6 +1,6 @@
 {
   "name": "voicebox-www",
-  "version": "1.0.0",
+  "version": "1.0.0-1",
   "description": "A simple web UI for voicebox (with bump).",
   "main": "index.js",
   "repository": {
@@ -14,7 +14,7 @@
   "dependencies": {
     "concat-stream": "~1.4.6",
     "ecstatic": "~0.5.4",
-    "voicebox-karaoke": "https://github.com/indexzero/node-voicebox.git#fix-bump"
+    "voicebox-karaoke": "git://github.com/indexzero/node-voicebox.git#fix-bump"
   },
   "devDependencies": {},
   "scripts": {
