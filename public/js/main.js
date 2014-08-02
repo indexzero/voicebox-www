@@ -9,6 +9,8 @@ $(function () {
     $.ajax({
       url: '/bump',
       type: 'POST',
+      // dataType: 'json',
+      // async: false,
       data: {
         roomId: roomId,
         song: song

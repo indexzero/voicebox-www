@@ -9,9 +9,13 @@ http.createServer(function (req, res) {
 
   if (req.url === '/bump') {
     req.pipe(concat(function (data) {
-      console.log('%s | %j', req.url, data);
-      var client = voicebox(data.roomId);
-      client.bump(data.song);
+      var parts = /roomId=([\w]+)\&song=([\d]+)/.exec('' + data);
+      console.log('%s | %s @ %s', req.url, parts[1], parts[2]);
+      var client = voicebox(parts[1]);
+      client.bump(parts[2]);
+
+      res.writeHead(200);
+      res.end();
     }));
     return;
   }
@@ -20,6 +24,8 @@ http.createServer(function (req, res) {
     req.pipe(concat(function (data) {
       var client = voicebox(data.roomId);
       client.addSong(data.song);
+      res.writeHead(200);
+      res.end();
     }));
     return;
   }
@@ -28,4 +34,3 @@ http.createServer(function (req, res) {
 
 
 }).listen(3000);
-
