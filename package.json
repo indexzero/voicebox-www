@@ -13,6 +13,7 @@
   "subdomain": "voicebox",
   "dependencies": {
     "concat-stream": "~1.4.6",
+    "ecstatic": "~0.5.4",
     "voicebox-karaoke": "0.0.1"
   },
   "devDependencies": {},
