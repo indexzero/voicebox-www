@@ -1,0 +1,11 @@
+#!/usr/bin/env node
+
+var voicebox = require('voicebox-karaoke'),
+    room = process.argv[2];
+
+console.log('%s | Get queue', room);
+var client = voicebox(room);
+
+client.getQueue(function (err, res) {
+  console.dir(arguments);
+})
