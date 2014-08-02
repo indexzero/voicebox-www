@@ -10,8 +10,11 @@ http.createServer(function (req, res) {
       .pipe(res);
   }
 
+  console.log('%s', req.url);
+
   if (req.url === '/bump') {
     req.pipe(concat(function (data) {
+      console.log('%s | %j', req.url, data);
       var client = voicebox(data.roomId);
       client.bump(data.song);
     }));
