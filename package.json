@@ -1,0 +1,22 @@
+{
+  "name": "voicebox-www",
+  "version": "1.0.0",
+  "description": "A simple web UI for voicebox (with bump).",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"LOLTESTS\""
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/indexzero/voicebox-www.git"
+  },
+  "keywords": [
+    "voicebox"
+  ],
+  "author": "Charlie Robbins <charlie.robbins@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/indexzero/voicebox-www/issues"
+  },
+  "homepage": "https://github.com/indexzero/voicebox-www"
+}
