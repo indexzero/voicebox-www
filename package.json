@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "A simple web UI for voicebox (with bump).",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"LOLTESTS\""
-  },
   "repository": {
     "type": "git",
     "url": "https://github.com/indexzero/voicebox-www.git"
@@ -13,7 +10,17 @@
   "keywords": [
     "voicebox"
   ],
-  "author": "Charlie Robbins <charlie.robbins@gmail.com>",
+  "subdomain": "voicebox",
+  "dependencies": {
+    "concat-stream": "~1.4.6",
+    "voicebox-karaoke": "0.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "start": "node index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Charlie Robbins && Jarrett Cruger",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/indexzero/voicebox-www/issues"
