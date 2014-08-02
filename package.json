@@ -26,5 +26,8 @@
   "bugs": {
     "url": "https://github.com/indexzero/voicebox-www/issues"
   },
-  "homepage": "https://github.com/indexzero/voicebox-www"
+  "homepage": "https://github.com/indexzero/voicebox-www",
+  "engines": {
+    "node": "0.10.x"
+  }
 }
